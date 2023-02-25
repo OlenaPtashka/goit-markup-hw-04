@@ -6,6 +6,7 @@
   --color-background-light: #f4f4fd;
   --color-primary-brand: #4d5ae5;
   --color-pressed-button: #404bbf;
+  --color-button-borber-grey: #8e8f99;
 }
 
 body {
@@ -72,6 +73,8 @@ img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /*це назви підрозділів - h3*/
@@ -195,7 +198,6 @@ img {
   margin-left: auto;
   background-color: var(--color-primary-brand);
   color: var(--color-main-light);
-
   cursor: pointer;
   font-family: 'Roboto';
   font-weight: 500;
@@ -216,9 +218,52 @@ img {
   gap: 24px;
 }
 
+.overlay {
+  height: 600px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/css/peopleoffice.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /*Оформлення секцій 2-4*/
 .activity-description {
   width: 264px;
+}
+
+.activity-description::before {
+  display: block;
+  content: '';
+  width: 264px;
+  height: 112px;
+  background-color: var(--color-background-light);
+  margin-bottom: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 64px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/css/antenna.svg);
+}
+
+.icoon-clock::before {
+  background-image: url(../images/css/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/css/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/css/astronaut.svg);
 }
 
 .team-section {
@@ -228,6 +273,21 @@ img {
 .team-description {
   padding: 32px 16px;
   text-align: center;
+}
+
+/*Секція 5 - Клієнти*/
+
+.customers-button {
+  box-sizing: content-box;
+  padding: 16px 32px;
+  border: 1px solid var(--color-button-borber-grey);
+  border-radius: 4px;
+}
+
+.flex-list-customers {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
 /*!!!Cторінка - Portfolio!!!*/
@@ -244,11 +304,13 @@ img {
 }
 
 .portfilio-button:hover,
-.portfilio-button:focus .portfilio-button:active {
+.portfilio-button:focus,
+.portfilio-button:active {
   background-color: var(--color-pressed-button);
   color: var(--color-main-light);
-  border-color: var(--color-pressed-button);
-  border-color: 1px solid var(--color-background-header-main);
+  border: 1px solid var(--color-pressed-button);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .radio-button-list {
