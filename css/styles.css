@@ -7,6 +7,8 @@
   --color-primary-brand: #4d5ae5;
   --color-pressed-button: #404bbf;
   --color-button-borber-grey: #8e8f99;
+  --color-custemers: #afb1b8;
+  --color-social-link-footer-active: #31d0aa;
 }
 
 body {
@@ -297,6 +299,12 @@ img {
   border-radius: 50%;
 }
 
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
+  background-color: var(--color-pressed-button);
+}
+
 .social-item {
   width: 40px;
   height: 40px;
@@ -317,6 +325,18 @@ img {
   border-radius: 4px;
 }
 
+.customers-button:hover,
+.customers-button:focus,
+.customers-button:active {
+  border: 1px solid var(--color-pressed-button);
+}
+
+.customers-button:hover,
+.customers-button:focus,
+.customers-button:active {
+  fill: var(--color-pressed-button);
+}
+
 .flex-list-customers {
   display: flex;
   justify-content: center;
@@ -326,6 +346,13 @@ img {
 .img-customers {
   width: 104px;
   height: 56px;
+  fill: var(--color-custemers);
+}
+
+.img-customers:hover,
+.img-customers:focus,
+.img-customers:active {
+  fill: var(--color-pressed-button);
 }
 
 /*!!!Cторінка - Portfolio!!!*/
@@ -452,6 +479,12 @@ img {
   fill: var(--color-background-light);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+}
+
+.social-link-footer:hover,
+.social-link-footer:focus,
+.social-link-footer:active {
+  background-color: var(--color-social-link-footer-active);
 }
 
 .social-icon-footer {
