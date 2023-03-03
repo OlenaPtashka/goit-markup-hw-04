@@ -319,6 +319,7 @@ img {
 /*Секція 5 - Клієнти*/
 
 .customers-button {
+  display: block;
   box-sizing: content-box;
   padding: 16px 32px;
   border: 1px solid var(--color-button-borber-grey);
@@ -329,12 +330,6 @@ img {
 .customers-button:focus,
 .customers-button:active {
   border: 1px solid var(--color-pressed-button);
-}
-
-.customers-button:hover,
-.customers-button:focus,
-.customers-button:active {
-  fill: var(--color-pressed-button);
 }
 
 .flex-list-customers {
